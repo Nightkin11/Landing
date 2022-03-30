@@ -57,6 +57,10 @@ h2 {
     margin-right: 47px;
 }
 
+.header-navigation__item :hover {
+    color: #E3B873;
+}
+
 .header-telephone {
     text-decoration-line: underline;
     color: #E3B873;
@@ -189,7 +193,7 @@ h2 {
     display: flex;
 }
 
-.div-descr{
+.completed-projects-descr{
     max-width: 600px;
     padding-right: 50px;
     float: left;
@@ -240,19 +244,12 @@ h2 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
     grid-gap: 2vw;
+    margin-top: 30px;
 }
 
 .gallery-nav__item a:active {
     color: #E3B873;
     text-decoration: underline;
-}
-
-.left-arrow {
-    transform: rotate(-90deg);
-}
-
-.right-arrow {
-    transform: rotate(90deg);
 }
 
 /* .gallery1 {
@@ -469,39 +466,46 @@ input {outline:none;}
     text-transform: uppercase;
     color: #181818;
 }
-.gallery-repair__item {
-    /* padding-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 392px);
-    grid-template-rows: auto;
-    grid-gap: 30px; */
-    margin-bottom: 200px;
-}
 
 .gallery-repair {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-rows: auto;
     grid-gap: 30px;
     position: relative;
     margin-bottom: 125px;
 }
 
-.descr-repair {
-    width: 330px;
-    height: 286px;
-    box-shadow: 0 0 10px 0px black;
-    position: absolute;
-    top: 294px;
-    background-color: #FFFFFF;
-}
-
-.gallery-repair-div {
+.gallery-repair__item {
+    max-width: 392px;
+    margin-bottom: 220px;
     display: flex;
     justify-content: center;
     position: relative;
 }
+
+.gallery-repair-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.descr-repair {
+    margin: 0 auto;
+    width: 330px;
+    height: 286px;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.05);
+    position: absolute;
+    top: 294px;
+    background-color: #FFFFFF;
+    padding-right: 20px;
+}
+
+/* .gallery-repair-div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+} */
 
 .subtitle-repair {
     font-family: 'Yeseva One';
@@ -757,16 +761,18 @@ input {outline:none;}
     padding-left: 0;
 }
 
+.fantasy-nav-li {
+    margin-bottom: 25px;
+}
+
 .fantasy-nav-item {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     /* line-height: 38px; */
     color: #FFFFFF;
-    margin-bottom: 25px;
     list-style: none;
     padding-bottom: 3px;
-    max-width: 200px;
 }
 
 .fantasy-nav-item:hover {
@@ -1030,10 +1036,9 @@ input {outline:none;}
 }
 
 
-
 @media only screen and (max-width:1270px) {
     .header-navigation, .button, .nav-arrows, .projects-nav,
-    .div-gallery, .client-contacts, .request, .background-photo, .our-clients,
+    .completed-projects-gallery, .client-contacts, .request, .background-photo, .our-clients,
     .our-clients-background, .map-svg, footer {
         display: none;
     }
@@ -1086,7 +1091,7 @@ input {outline:none;}
         margin: 0 auto;
     }
     
-    .div-descr {
+    .completed-projects-descr {
         padding: 0;
         margin: 0 auto;
     }
@@ -1113,7 +1118,7 @@ input {outline:none;}
         align-items: center;
         width: 100%;
         max-width: 100%;
-        min-width: 340px;
+        min-width: 300px;
     }
     
     .mobile-gallery-photo {
@@ -1135,6 +1140,8 @@ input {outline:none;}
 
     .video-wrapper {
         max-width: 817px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     .video1 {
@@ -1143,19 +1150,21 @@ input {outline:none;}
         height: 100%;
     }
 
+    .gallery-repair__item {
+        justify-content: left;
+    }
+
+    .descr-repair {
+        width: 270px;
+        top: 180px;
+    }
+
     .completed-projects-background {
         height: 100%;
     }
 
     .title-white {
         font-size: 22px;
-    }
-
-    .div-descr {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .text-camera {
@@ -1206,9 +1215,9 @@ input {outline:none;}
         display: block;
     }
 
-    .mobile-gallery {
-        margin-bottom: -30%;
+    .mobile-gallery2 {
         z-index: 1;
+        margin-bottom: -30%;
     }
 
     .form-black3 {
